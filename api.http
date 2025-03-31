@@ -1,0 +1,38 @@
+POST http://localhost:8000/events
+Content-Type: application/json
+
+{
+    "title": "Highlander",
+    "details": "Só pode haver um",
+    "maximumAttendees": 1
+}
+
+###
+
+POST http://localhost:8000/events/3c23eb02-d98c-4adc-9735-5be0392a3748/attendees
+Content-Type: application/json
+
+{
+    "name": "Lucas Inutilismo",
+    "email": "inutislismo@gmail.com"
+}
+
+###
+
+GET http://localhost:8000/events/3c23eb02-d98c-4adc-9735-5be0392a3748
+
+###
+
+GET http://localhost:8000/attendees/8/badge
+
+###
+
+GET http://localhost:8000/attendees/9/check-in
+
+###
+
+GET http://localhost:8000/events/3c23eb02-d98c-4adc-9735-5be0392a3748/attendees
+
+###
+
+GET http://localhost:8000/events/3c23eb02-d98c-4adc-9735-5be0392a3748/attendees?query=andré
