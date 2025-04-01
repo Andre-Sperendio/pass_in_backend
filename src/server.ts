@@ -11,6 +11,7 @@ import fastifySwaggerUi from "@fastify/swagger-ui";
 import { errorHandler } from "./utils/error-handler";
 import fastifyCors from "@fastify/cors";
 import { deleteEvent } from "./routes/delete-event";
+import { deleteAttendee } from "./routes/delete-attendee";
 
 // Criação do app para elaboração das rotas
 const app = fastify()
@@ -63,6 +64,9 @@ app.register(getEventAtttendees)
 
 // Rota para deletar um evento
 app.register(deleteEvent)
+
+// Rota para deletar um participante
+app.register(deleteAttendee)
 
 // Tratamento de Erros
 app.setErrorHandler(errorHandler)

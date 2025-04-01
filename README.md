@@ -36,7 +36,7 @@ O participante poderá:
 
 - [ ] Criar rota para buscar o Id do evento pelo slug
 - [ ] Adicionar CPF no cadastro do participante
-- [ ] Criar rota para Deletar Evento
-- [ ] Criar rota para Deletar Participante
+- [X] Criar rota para Deletar Evento
+- [X] Criar rota para Deletar Participante
 - [ ] Criar rota para Update de Evento
 - [ ] Criar rota para Update de Participante
