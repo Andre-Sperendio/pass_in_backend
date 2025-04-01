@@ -31,3 +31,12 @@ O participante poderá:
 ### Requisitos não-funcionais
 
 - [X] O check-in no evento será realizado através de um QRCode;
+
+### Aprimoramentos
+
+- [ ] Criar rota para buscar o Id do evento pelo slug
+- [ ] Adicionar CPF no cadastro do participante
+- [ ] Criar rota para Deletar Evento
+- [ ] Criar rota para Deletar Participante
+- [ ] Criar rota para Update de Evento
+- [ ] Criar rota para Update de Participante
