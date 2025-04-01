@@ -2,9 +2,9 @@ POST http://localhost:8000/events
 Content-Type: application/json
 
 {
-    "title": "Highlander",
-    "details": "Só pode haver um",
-    "maximumAttendees": 1
+    "title": "Salão do Automóvel 2025",
+    "details": "Um evento para os apaixonados por Automobilismo",
+    "maximumAttendees": 100
 }
 
 ###
@@ -13,8 +13,8 @@ POST http://localhost:8000/events/3c23eb02-d98c-4adc-9735-5be0392a3748/attendees
 Content-Type: application/json
 
 {
-    "name": "Lucas Inutilismo",
-    "email": "inutislismo@gmail.com"
+    "name": "André Sperendio",
+    "email": "andresperendio97@gmail.com"
 }
 
 ###
