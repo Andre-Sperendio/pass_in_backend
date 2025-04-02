@@ -34,7 +34,7 @@ O participante poderá:
 
 ### Aprimoramentos
 
-- [ ] Criar rota para buscar o Id do evento pelo slug
+- [ ] A rota getEvent busca todos os eventos criados, podendo buscar um evento específico pelo slug
 - [ ] Adicionar CPF no cadastro do participante
 - [X] Criar rota para Deletar Evento
 - [X] Criar rota para Deletar Participante

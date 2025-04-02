@@ -1,4 +1,10 @@
 import {
+  getEvent
+} from "./chunk-SP7YHMHN.mjs";
+import {
+  registerForEvent
+} from "./chunk-6KRO2NCA.mjs";
+import {
   errorHandler
 } from "./chunk-EIQXFEAS.mjs";
 import {
@@ -9,17 +15,17 @@ import {
 } from "./chunk-7WYCFGKK.mjs";
 import "./chunk-QJO26ERM.mjs";
 import {
+  deleteAttendee
+} from "./chunk-ULPNIB2T.mjs";
+import {
+  deleteEvent
+} from "./chunk-F6QALX2C.mjs";
+import {
   getAttendeeBadge
 } from "./chunk-SBJGFG6H.mjs";
 import {
   getEventAtttendees
 } from "./chunk-R2ERTXLV.mjs";
-import {
-  getEvent
-} from "./chunk-SP7YHMHN.mjs";
-import {
-  registerForEvent
-} from "./chunk-6KRO2NCA.mjs";
 import "./chunk-JRO4E4TH.mjs";
 import "./chunk-JV6GRE7Y.mjs";
 
@@ -56,6 +62,8 @@ app.register(getEvent);
 app.register(getAttendeeBadge);
 app.register(checkIn);
 app.register(getEventAtttendees);
+app.register(deleteEvent);
+app.register(deleteAttendee);
 app.setErrorHandler(errorHandler);
 app.listen({ port: 8e3, host: "0.0.0.0" }).then(() => {
   console.log("Servidor HTTP rodando! http://localhost:8000/");
