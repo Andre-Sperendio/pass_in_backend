@@ -1,33 +1,36 @@
 import {
+  getAllEvents
+} from "./chunk-CS45MYRJ.mjs";
+import {
+  getAttendeeBadge
+} from "./chunk-EJE55M4N.mjs";
+import {
+  getEventAtttendees
+} from "./chunk-BNFW6ERK.mjs";
+import {
   getEvent
-} from "./chunk-SP7YHMHN.mjs";
+} from "./chunk-IEN6Y3YV.mjs";
 import {
   registerForEvent
-} from "./chunk-6KRO2NCA.mjs";
+} from "./chunk-ZECYLJV6.mjs";
 import {
   errorHandler
 } from "./chunk-EIQXFEAS.mjs";
 import {
   checkIn
-} from "./chunk-IPPLF7PP.mjs";
+} from "./chunk-XZ3XJ5AM.mjs";
 import {
   createEvent
-} from "./chunk-7WYCFGKK.mjs";
+} from "./chunk-NWW5XQT4.mjs";
 import "./chunk-QJO26ERM.mjs";
 import {
   deleteAttendee
-} from "./chunk-ULPNIB2T.mjs";
+} from "./chunk-J7GGKJTE.mjs";
 import {
   deleteEvent
-} from "./chunk-F6QALX2C.mjs";
-import {
-  getAttendeeBadge
-} from "./chunk-SBJGFG6H.mjs";
-import {
-  getEventAtttendees
-} from "./chunk-R2ERTXLV.mjs";
-import "./chunk-JRO4E4TH.mjs";
+} from "./chunk-Z6MWFE4L.mjs";
 import "./chunk-JV6GRE7Y.mjs";
+import "./chunk-JRO4E4TH.mjs";
 
 // src/server.ts
 import fastify from "fastify";
@@ -64,6 +67,7 @@ app.register(checkIn);
 app.register(getEventAtttendees);
 app.register(deleteEvent);
 app.register(deleteAttendee);
+app.register(getAllEvents);
 app.setErrorHandler(errorHandler);
 app.listen({ port: 8e3, host: "0.0.0.0" }).then(() => {
   console.log("Servidor HTTP rodando! http://localhost:8000/");

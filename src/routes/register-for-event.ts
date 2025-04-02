@@ -55,6 +55,10 @@ export async function registerForEvent(app: FastifyInstance){
                 })
             ])
             
+            if (event === null){
+                throw new BadRequest("Evento não encontrado!")
+            }
+            
             if(event?.maximumAttendees && amountOfAttendeesOnEvent >= event?.maximumAttendees){
                 throw new BadRequest("Este evento já está lotado!")
             }
