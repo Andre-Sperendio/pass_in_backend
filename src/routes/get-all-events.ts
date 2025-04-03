@@ -24,6 +24,8 @@ export async function getAllEvents(app: FastifyInstance){
                                 details: z.string().nullable(),
                                 maximumAttendees: z.number().int().nullable(),
                                 attendeesAmount: z.number().int(),
+                                startDate: z.string().date(),
+                                startTime: z.string().time()
                             })
                         )
                     })
@@ -40,6 +42,8 @@ export async function getAllEvents(app: FastifyInstance){
                     slug: true,
                     details: true,
                     maximumAttendees: true,
+                    startDate: true,
+                    startTime: true,
                     _count:{
                         select:{
                             attendees: true
@@ -66,7 +70,9 @@ export async function getAllEvents(app: FastifyInstance){
                         slug: event.slug,
                         details: event.details,
                         maximumAttendees: event.maximumAttendees,
-                        attendeesAmount: event._count.attendees
+                        attendeesAmount: event._count.attendees,
+                        startDate: event.startDate,
+                        startTime: event.startTime
                     }
                 })
             })

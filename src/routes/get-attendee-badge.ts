@@ -20,6 +20,8 @@ export async function getAttendeeBadge(app: FastifyInstance){
                             name: z.string().min(4),
                             email: z.string().email(),
                             eventTitle: z.string(),
+                            eventDate: z.string().date(),
+                            eventTime: z.string().time(),
                             checkInURL: z.string().url()
                         })
                     })
@@ -35,7 +37,9 @@ export async function getAttendeeBadge(app: FastifyInstance){
                     email: true,
                     event:{
                         select:{
-                            title: true
+                            title: true,
+                            startDate: true,
+                            startTime: true
                         }
                     }
                 },
@@ -57,6 +61,8 @@ export async function getAttendeeBadge(app: FastifyInstance){
                     name: attendee.name,
                     email: attendee.email,
                     eventTitle: attendee.event.title,
+                    eventDate: attendee.event.startDate,
+                    eventTime: attendee.event.startTime,
                     checkInURL: checkInURL.toString()
                 } 
             })

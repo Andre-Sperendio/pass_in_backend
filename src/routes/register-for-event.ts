@@ -4,6 +4,7 @@ import { z } from "zod";
 import { prisma } from "../lib/prisma";
 import { BadRequest } from "./_errors/bad-request";
 import { validateCPF } from "../utils/validate-cpf";
+import { isLateByDatetime } from "../utils/is-late-by-datetime";
 
 export async function registerForEvent(app: FastifyInstance){
     app
@@ -47,6 +48,10 @@ export async function registerForEvent(app: FastifyInstance){
             
             if (event === null){
                 throw new BadRequest("Evento não encontrado!")
+            }
+            
+            if (isLateByDatetime(event.startDate, event.startTime)){
+                throw new BadRequest("O participante não pode se registrar para um evento que já iniciou!")
             }
             
             if(event?.maximumAttendees && amountOfAttendeesOnEvent >= event?.maximumAttendees){

@@ -7,7 +7,9 @@ async function seed(){
             title: 'Salão do Automóvel 2025',
             slug: 'salao-do-automovel-2025',
             details: 'Evento para os apaixonados por automobilismo!',
-            maximumAttendees: 150
+            maximumAttendees: 150,
+            startDate: "2025-12-31",
+            startTime: "21:00:00"
         }
     })    
 }

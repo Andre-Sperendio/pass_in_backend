@@ -12,7 +12,7 @@ O sistema fará um scan da credencial do participante para permitir a entrada no
 
 ### Requisitos funcionais
 
-- O organizador poderá:
+O organizador poderá:
 - [X] Cadastrar um novo evento;
 - [X] Visualizar dados de um evento;
 - [X] Visualizar a lista de participantes; 
@@ -27,6 +27,8 @@ O participante poderá:
 - [X] O participante só pode se inscrever em um evento uma única vez;
 - [X] O participante só pode se inscrever em eventos com vagas disponíveis;
 - [X] O participante só pode realizar check-in em um evento uma única vez;
+- [X] O participante não pode se registrar para um evento que já iniciou;
+- [X] O organizador não pode criar um evento com data de início antes da data atual
 
 ### Requisitos não-funcionais
 
@@ -38,6 +40,6 @@ O participante poderá:
 - [X] Adicionar CPF no cadastro do participante
 - [X] Criar rota para Deletar Evento
 - [X] Criar rota para Deletar Participante
-- [ ] Na tabela de Eventos, adicionar as colunas startDate e duration
+- [X] Na tabela de Eventos, adicionar as colunas startDate e startTime
 - [ ] Criar rota para Update de Evento
 - [ ] Criar rota para Update de Participante
