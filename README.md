@@ -35,8 +35,9 @@ O participante poderá:
 ### Aprimoramentos
 
 - [X] Criar a rota getAllEvents para buscar todos os eventos criados, podendo buscar um evento específico pelo slug
-- [ ] Adicionar CPF no cadastro do participante
+- [X] Adicionar CPF no cadastro do participante
 - [X] Criar rota para Deletar Evento
 - [X] Criar rota para Deletar Participante
+- [ ] Na tabela de Eventos, adicionar as colunas startDate e duration
 - [ ] Criar rota para Update de Evento
 - [ ] Criar rota para Update de Participante
