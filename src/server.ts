@@ -13,6 +13,8 @@ import fastifyCors from "@fastify/cors";
 import { deleteEvent } from "./routes/delete-event";
 import { deleteAttendee } from "./routes/delete-attendee";
 import { getAllEvents } from "./routes/get-all-events";
+import { updateEvent } from "./routes/update-event";
+import { updateAttendee } from "./routes/update-attendee";
 
 // Criação do app para elaboração das rotas
 const app = fastify()
@@ -71,6 +73,12 @@ app.register(deleteAttendee)
 
 // Rota para buscar eventos pelo Slug
 app.register(getAllEvents)
+
+// Rota para atualizar valores de um evento
+app.register(updateEvent)
+
+// Rota para atualizar valores de um participante
+app.register(updateAttendee)
 
 // Tratamento de Erros
 app.setErrorHandler(errorHandler)

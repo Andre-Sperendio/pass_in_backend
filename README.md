@@ -41,5 +41,5 @@ O participante poderá:
 - [X] Criar rota para Deletar Evento
 - [X] Criar rota para Deletar Participante
 - [X] Na tabela de Eventos, adicionar as colunas startDate e startTime
-- [ ] Criar rota para Update de Evento
-- [ ] Criar rota para Update de Participante
+- [X] Criar rota para Update de Evento
+- [X] Criar rota para Update de Participante
