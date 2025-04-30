@@ -8,7 +8,7 @@ export async function getAllEvents(app: FastifyInstance){
         .withTypeProvider<ZodTypeProvider>()
         .get('/events', {
             schema:{
-                summary: "Get all Events, query by Event Slug",
+                summary: "Get all Events",
                 tags: ['events'],
                 querystring: z.object({
                     query: z.string().nullish(),

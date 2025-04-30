@@ -1,36 +1,44 @@
 import {
-  getAllEvents
-} from "./chunk-CS45MYRJ.mjs";
-import {
-  getAttendeeBadge
-} from "./chunk-EJE55M4N.mjs";
-import {
   getEventAtttendees
-} from "./chunk-BNFW6ERK.mjs";
+} from "./chunk-R2ERTXLV.mjs";
 import {
   getEvent
-} from "./chunk-IEN6Y3YV.mjs";
+} from "./chunk-VUSYMGJH.mjs";
 import {
   registerForEvent
-} from "./chunk-ZECYLJV6.mjs";
+} from "./chunk-54H65BOG.mjs";
+import {
+  updateAttendee
+} from "./chunk-7U6L3T6O.mjs";
+import "./chunk-YRGFOKQX.mjs";
+import {
+  updateEvent
+} from "./chunk-IM4QJ42A.mjs";
 import {
   errorHandler
 } from "./chunk-EIQXFEAS.mjs";
 import {
   checkIn
-} from "./chunk-XZ3XJ5AM.mjs";
+} from "./chunk-IPPLF7PP.mjs";
 import {
   createEvent
-} from "./chunk-NWW5XQT4.mjs";
+} from "./chunk-I2UQVLHV.mjs";
 import "./chunk-QJO26ERM.mjs";
+import "./chunk-VPFMAY64.mjs";
 import {
   deleteAttendee
-} from "./chunk-J7GGKJTE.mjs";
+} from "./chunk-ULPNIB2T.mjs";
 import {
   deleteEvent
-} from "./chunk-Z6MWFE4L.mjs";
-import "./chunk-JV6GRE7Y.mjs";
+} from "./chunk-F6QALX2C.mjs";
+import {
+  getAllEvents
+} from "./chunk-BIN7THQF.mjs";
+import {
+  getAttendeeBadge
+} from "./chunk-GXU5TRRI.mjs";
 import "./chunk-JRO4E4TH.mjs";
+import "./chunk-JV6GRE7Y.mjs";
 
 // src/server.ts
 import fastify from "fastify";
@@ -68,6 +76,8 @@ app.register(getEventAtttendees);
 app.register(deleteEvent);
 app.register(deleteAttendee);
 app.register(getAllEvents);
+app.register(updateEvent);
+app.register(updateAttendee);
 app.setErrorHandler(errorHandler);
 app.listen({ port: 8e3, host: "0.0.0.0" }).then(() => {
   console.log("Servidor HTTP rodando! http://localhost:8000/");
