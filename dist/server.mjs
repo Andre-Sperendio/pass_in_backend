@@ -1,44 +1,44 @@
 import {
-  getEventAtttendees
-} from "./chunk-R2ERTXLV.mjs";
-import {
-  getEvent
-} from "./chunk-VUSYMGJH.mjs";
-import {
-  registerForEvent
-} from "./chunk-54H65BOG.mjs";
-import {
-  updateAttendee
-} from "./chunk-7U6L3T6O.mjs";
-import "./chunk-YRGFOKQX.mjs";
-import {
   updateEvent
-} from "./chunk-IM4QJ42A.mjs";
-import {
-  errorHandler
-} from "./chunk-EIQXFEAS.mjs";
-import {
-  checkIn
-} from "./chunk-IPPLF7PP.mjs";
-import {
-  createEvent
-} from "./chunk-I2UQVLHV.mjs";
-import "./chunk-QJO26ERM.mjs";
-import "./chunk-VPFMAY64.mjs";
+} from "./chunk-55SN3AFD.mjs";
 import {
   deleteAttendee
-} from "./chunk-ULPNIB2T.mjs";
+} from "./chunk-J7GGKJTE.mjs";
 import {
   deleteEvent
-} from "./chunk-F6QALX2C.mjs";
+} from "./chunk-Z6MWFE4L.mjs";
 import {
   getAllEvents
 } from "./chunk-BIN7THQF.mjs";
 import {
   getAttendeeBadge
-} from "./chunk-GXU5TRRI.mjs";
-import "./chunk-JRO4E4TH.mjs";
+} from "./chunk-RGO7UZ5J.mjs";
+import {
+  getEventAtttendees
+} from "./chunk-BNFW6ERK.mjs";
+import {
+  getEvent
+} from "./chunk-OX4DX4AM.mjs";
+import {
+  registerForEvent
+} from "./chunk-KZBLWXEH.mjs";
+import {
+  updateAttendee
+} from "./chunk-DOIB4RZW.mjs";
+import {
+  errorHandler
+} from "./chunk-EIQXFEAS.mjs";
+import "./chunk-YRGFOKQX.mjs";
+import {
+  checkIn
+} from "./chunk-XZ3XJ5AM.mjs";
+import {
+  createEvent
+} from "./chunk-BORNKHIV.mjs";
+import "./chunk-QJO26ERM.mjs";
+import "./chunk-VPFMAY64.mjs";
 import "./chunk-JV6GRE7Y.mjs";
+import "./chunk-JRO4E4TH.mjs";
 
 // src/server.ts
 import fastify from "fastify";
