@@ -28,7 +28,8 @@ export async function getEventAtttendees(app: FastifyInstance){
                                 createdAt: z.date(),
                                 checkedInAt: z.date().nullable()
                             })
-                        )
+                        ),
+                        total: z.number()
                     })
                 }
             }
@@ -47,6 +48,15 @@ export async function getEventAtttendees(app: FastifyInstance){
                 throw new BadRequest("Evento não encontrado!")
             }
             
+            const filters = query ? {
+                eventId: eventId,
+                name:{
+                    contains: query
+                }
+            } : {
+                eventId: eventId
+            }
+
             const attendees = await prisma.attendee.findMany({
                 select:{
                     id: true,
@@ -59,19 +69,16 @@ export async function getEventAtttendees(app: FastifyInstance){
                         }
                     }
                 },
-                where: query ? {
-                    eventId: eventId,
-                    name:{
-                        contains: query
-                    }
-                } : {
-                    eventId: eventId
-                },
+                where: filters,
                 take: 10,
                 skip: pageIndex * 10,
                 orderBy: {
                     createdAt: 'desc'
                 }
+            })
+
+            const total = await prisma.attendee.count({
+                where: filters
             })
 
             return reply.send({ 
@@ -83,7 +90,8 @@ export async function getEventAtttendees(app: FastifyInstance){
                         createdAt: attendee.createdAt,
                         checkedInAt: attendee.checkIn?.createdAt ?? null
                     }
-                })
+                }),
+                total
             })
         }) 
 }

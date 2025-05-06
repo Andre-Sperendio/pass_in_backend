@@ -31,7 +31,7 @@ GET http://localhost:8000/attendees/9/check-in
 
 ###
 
-GET http://localhost:8000/events/3c23eb02-d98c-4adc-9735-5be0392a3748/attendees
+GET http://localhost:8000/events/7adb50a9-f555-469b-b825-7f58d5321051/attendees
 
 ###
 
