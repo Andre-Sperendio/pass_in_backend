@@ -7,7 +7,7 @@ import { BadRequest } from "./_errors/bad-request";
 export async function deleteAttendee(app: FastifyInstance){
     app
         .withTypeProvider<ZodTypeProvider>()
-        .delete('/attendees/:attendeeId/', {
+        .delete('/attendees/:attendeeId', {
             schema:{
                 summary: "Delete an Attendee",
                 tags: ['attendees'],
