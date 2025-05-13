@@ -19,9 +19,10 @@ import { updateAttendee } from "./routes/update-attendee";
 // Criação do app para elaboração das rotas
 const app = fastify()
 
-// Permite requisições à API
+// Permite requisições do backend à API
 app.register(fastifyCors, {
-    origin: '*'
+    origin: 'http://localhost:5173',
+    methods: ['GET', 'POST', 'PATCH', 'DELETE', 'OPTIONS']
 })
 
 // Documentação Swagger

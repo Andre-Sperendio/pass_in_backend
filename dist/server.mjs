@@ -48,7 +48,8 @@ import fastifySwaggerUi from "@fastify/swagger-ui";
 import fastifyCors from "@fastify/cors";
 var app = fastify();
 app.register(fastifyCors, {
-  origin: "*"
+  origin: "http://localhost:5173",
+  methods: ["GET", "POST", "PATCH", "DELETE", "OPTIONS"]
 });
 app.register(fastifySwagger, {
   swagger: {
